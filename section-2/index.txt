@@ -1,0 +1,22 @@
+stylesheet helps with autocompletion and provide us with errors and warnings for invalid styles
+
+Text doesn't support border-radius for ios
+
+styles don't cascade in rn so child elements inheriting styles is not a part of rn
+so no inheritence or cascading in rn
+
+if an item has a key property falt list will recognize it automatically
+
+    <View style={styles.goalItem}>
+      <Pressable
+        android_ripple={{ color: "#210644" }}
+        onPress={props.onDeleteItem.bind(null, props.id)}
+        style={({ pressed }) => pressed && styles.pressedItem}
+      >
+        <Text style={styles.goalText}>{props.text}</Text>
+      </Pressable>
+    </View>
+
+    "backgroundColor": "#1e085a", // add this to app.json to add it as a background color for all screens
+
+      <StatusBar style="light" />
