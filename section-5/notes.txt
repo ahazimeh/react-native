@@ -1,0 +1,2 @@
+// on android window exclude status bar but on ios there is no difference between window and screen
+const deviceWidth = Dimensions.get("window").width

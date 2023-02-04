@@ -5,7 +5,11 @@ Text doesn't support border-radius for ios
 styles don't cascade in rn so child elements inheriting styles is not a part of rn
 so no inheritence or cascading in rn
 
-if an item has a key property falt list will recognize it automatically
+scrollView
+FlatList is more optimized for long lists
+
+if an item has a key property flat list will recognize it automatically
+otherwise use keyExtractor
 
     <View style={styles.goalItem}>
       <Pressable
@@ -20,3 +24,5 @@ if an item has a key property falt list will recognize it automatically
     "backgroundColor": "#1e085a", // add this to app.json to add it as a background color for all screens
 
       <StatusBar style="light" />
+
+Scroll
