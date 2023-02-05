@@ -23,6 +23,7 @@ otherwise use keyExtractor
 
     "backgroundColor": "#1e085a", // add this to app.json to add it as a background color for all screens
 
+      import from expo-status-bar
       <StatusBar style="light" />
 
 Scroll

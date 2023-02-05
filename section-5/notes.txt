@@ -1,2 +1,18 @@
 // on android window exclude status bar but on ios there is no difference between window and screen
 const deviceWidth = Dimensions.get("window").width
+
+// allow different orientation
+"orientation": "default",
+
+// this watches device orientation changes
+const { width, height } = useWindowDimensions();
+
+// to prevent the keyboard from blocking the app wrap the component with
+// screen style gets flex:1
+<ScrollView style={styles.screen}>
+    <KeyboardAvoidingView style={styles.screen} behavior="position">
+
+
+borderWidth: Platform.OS === "android" ? 2 : 0,
+borderWidth: Platform.select({ ios: 0, android: 2 }),
+another alternative is to add Title.android and Title.ios files and react native will pick up this automatically
