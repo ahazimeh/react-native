@@ -1,0 +1,32 @@
+// you should add key when updating numColumns
+<FlatList
+    key={""}
+    data={CATEGORIES}
+    keyExtractor={(item) => item.id}
+    renderItem={renderCategoryItem}
+    numColumns={2}
+/>
+
+for ios you need to add backgroundColor for shadow to have an effect
+
+
+// wrap your entire app with it
+<NavigationContainer>
+    <CategoriesScreen />
+</NavigationContainer>
+
+// in docs under api reference -> navigators you find all the supported navigators
+
+npm install @react-navigation/native-stack
+
+
+<StatusBar style="dark" />
+<NavigationContainer>
+<Stack.Navigator initialRouteName="ProductDetails">
+    <Stack.Screen name="MealsCategories" component={CategoriesScreen} />
+    <Stack.Screen name="MealsOverview" component={MealsOverviewScreen} />
+</Stack.Navigator>
+</NavigationContainer>
+
+{navigation} // components that uses stack will receive navigation props
+navigation.navigate("MealsOverview");
