@@ -28,5 +28,12 @@ npm install @react-navigation/native-stack
 </Stack.Navigator>
 </NavigationContainer>
 
-{navigation} // components that uses stack will receive navigation props
-navigation.navigate("MealsOverview");
+{navigation, route} // components that uses stack will receive navigation props
+navigation.navigate("MealsOverview",{
+    categoryId: itemData.item.id,
+});
+// an alternative to navigate in non screen components
+const navigation = useNavigation();
+const catId = route.params.categoryId;
+// an alternative to route in non screen components
+const route = useRoute();
