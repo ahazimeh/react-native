@@ -52,12 +52,23 @@ const route = useRoute();
         }}
     >
         <Stack.Screen
-        name="MealsCategories"
-        component={CategoriesScreen}
-        options={{
-            title: "All Categories",
-        }}
+            name="MealsCategories"
+            component={CategoriesScreen}
+            options={{
+                title: "All Categories",
+            }}
         />
-        <Stack.Screen name="MealsOverview" component={MealsOverviewScreen} />
+        <Stack.Screen
+            name="MealsOverview"
+            component={MealsOverviewScreen}
+            // options={({ navigation, route }) => {
+            //   const catId = route.params.categoryId;
+            //   return {
+            //     title: catId,
+            //   };
+            // }}
+        />
     </Stack.Navigator>
 </NavigationContainer>
+// alternative to the comments above inside useEffect or useLayoutEffect to set the options before first render so you don't see values changing
+navigation.setOptions({});
