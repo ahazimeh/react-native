@@ -37,3 +37,27 @@ const navigation = useNavigation();
 const catId = route.params.categoryId;
 // an alternative to route in non screen components
 const route = useRoute();
+
+// for image from web you need to add styles for width and height
+<Image source={{uri:imageUrl}}/>
+
+<NavigationContainer>
+    <Stack.Navigator
+        screenOptions={{
+        headerStyle: { backgroundColor: "#351401" },
+        headerTintColor: "white",
+        contentStyle: {
+            backgroundColor: "#3f2f25", // for main screen content
+        },
+        }}
+    >
+        <Stack.Screen
+        name="MealsCategories"
+        component={CategoriesScreen}
+        options={{
+            title: "All Categories",
+        }}
+        />
+        <Stack.Screen name="MealsOverview" component={MealsOverviewScreen} />
+    </Stack.Navigator>
+</NavigationContainer>
