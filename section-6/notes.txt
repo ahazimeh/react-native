@@ -85,3 +85,66 @@ navigation.setOptions({});
 />
 if you need such interaction then set the options in the screen
 // set layouteffect......
+
+// always wrap components with NavigationContainer for all navigations
+<NavigationContainer>
+</NavigationContainer>
+
+navigation.toggleDrawer();
+
+<Drawer.Navigator
+    screenOptions={{
+        headerStyle: { backgroundColor: "#3c0a6b" },
+        headerTintColor: "white",
+        drawerActiveBackgroundColor: "#f0e1ff",
+        drawerActiveTintColor: "#3c0a6b",
+        // drawerStyle: { backgroundColor: "#ccc" },
+    }}
+    >
+    <Drawer.Screen
+        name="Welcome"
+        component={WelcomScreen}
+        options={{
+        drawerLabel: "Welcome Screen",
+        drawerIcon: ({ color, focused, size }) => (
+            <Ionicons name="home" color={color} size={size} />
+        ),
+        }}
+    />
+    <Drawer.Screen
+        name="User"
+        component={UserScreen}
+        options={{
+        drawerIcon: ({ color, focused, size }) => (
+            <Ionicons name="person" color={color} size={size} />
+        ),
+        }}
+    />
+</Drawer.Navigator>
+
+<BottomTab.Navigator
+    screenOptions={{
+        headerStyle: { backgroundColor: "#3c0a6b" },
+        headerTintColor: "white",
+        tabBarActiveTintColor: "#3c0a6b",
+    }}
+    >
+    <BottomTab.Screen
+        name="Welcome"
+        component={WelcomScreen}
+        options={{
+        tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home" color={color} size={size} />
+        ),
+        }}
+    />
+    <BottomTab.Screen
+        name="User"
+        component={UserScreen}
+        options={{
+        tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person" color={color} size={size} />
+        ),
+        }}
+    />
+</BottomTab.Navigator>
