@@ -72,3 +72,16 @@ const route = useRoute();
 </NavigationContainer>
 // alternative to the comments above inside useEffect or useLayoutEffect to set the options before first render so you don't see values changing
 navigation.setOptions({});
+
+// but here it is not possible to interact with the screen from the header
+<Stack.Screen
+    name="MealDetail"
+    component={MealDetailScreen}
+    options={{
+        headerRight: () => {
+            return <Button title="Tap me!" />;
+        },
+    }}
+/>
+if you need such interaction then set the options in the screen
+// set layouteffect......
