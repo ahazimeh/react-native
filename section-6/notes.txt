@@ -153,3 +153,4 @@ for drawer options the contentStyle is called sceneContainerStyle
 options={{
     headerShown: false,
 }}
+drawerContentStyle: { backgroundColor: "#351401" },
